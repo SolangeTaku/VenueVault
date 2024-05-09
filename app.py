@@ -1,4 +1,3 @@
-import json
 import logging
 import os
 
@@ -31,11 +30,6 @@ jwt = JWTManager(app)
 
 # Register the authentication blueprint
 app.register_blueprint(auth_bp, url_prefix="/auth")
-
-
-@app.route("/database")
-def database():
-    return "sqlite:///database.db"
 
 
 if __name__ == "__main__":
